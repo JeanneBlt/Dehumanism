@@ -1,18 +1,32 @@
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
-MemoryCaptures/
+# Ignore les fichiers Visual Studio
+.vs/
 *.csproj
-*.unityproj
 *.sln
 *.suo
-*.tmp
-*.user
-*.userprefs
+
+# Ignore les fichiers spécifiques à Unity
+Library/
+Temp/
+Obj/
+*.csproj
 *.pidb
+*.userprefs
 *.booproj
 *.svd
+
+# Ignore les paramètres utilisateur Unity
+UserSettings/
+
+# Ignore les fichiers de construction
+Build/
+Builds/
+
+# Ignore les fichiers de logs
+*.log
+
+# Ignore les fichiers liés aux tests
+*.pidb
+*.unitypackage
+
+# Ignore les fichiers personnels
+.DS_Store
