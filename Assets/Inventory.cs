@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    public List<ItemData> content = new List<ItemData>();
+    [SerializeField]
+    private List<ItemData> content = new List<ItemData>();
+
+    public void AddItem(ItemData item)
+    {
+        content.Add(item);
+    }
 }
