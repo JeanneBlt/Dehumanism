@@ -14,6 +14,13 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private Transform inventorySlotsParent;
 
+    const int InventorySize = 24;
+
+    private void Start()
+    {
+        RefreshContent();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.I))
@@ -40,6 +47,11 @@ public class Inventory : MonoBehaviour
         {
             inventorySlotsParent.GetChild(i).GetChild(0).GetComponent<Image>().sprite = content[i].visual;
         }
+    }
+
+    public bool isFull()
+    {
+        return InventorySize == content.Count;
     }
 
 }

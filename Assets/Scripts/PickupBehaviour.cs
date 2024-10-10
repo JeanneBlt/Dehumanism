@@ -17,6 +17,11 @@ public class PickupBehaviour : MonoBehaviour
 
     public void DoPickup(Item item)
     {
+        if(inventory.isFull())
+        {
+            Debug.Log("Inventory full, can't pickup  : " + item.name);
+            return;
+        }
 
         currentItem = item;
 
