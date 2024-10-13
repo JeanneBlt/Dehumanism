@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpItem : MonoBehaviour
+public class PickupItem : MonoBehaviour
 {
     [SerializeField]
     private float pickUpRange = 2.6f;

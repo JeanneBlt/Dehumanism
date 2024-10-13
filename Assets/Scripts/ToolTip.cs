@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[ExecuteInEditMode]
-
-public class ToolTip : MonoBehaviour
+public class Tooltip : MonoBehaviour
 {
     [SerializeField]
     private Text headerField;
@@ -18,11 +16,39 @@ public class ToolTip : MonoBehaviour
     [SerializeField]
     private int maxCharacter;
 
-    void Update()
+    [SerializeField]
+    private RectTransform rectTransform;
+
+    public void SetText( string content, string header = "")
     {
+        if (header == "")
+        {
+            headerField.gameObject.SetActive(false);
+        }
+        else
+        {
+            headerField.gameObject.SetActive(true);
+            headerField.text = header;
+        }
+
+        contentField.text = content;
+
         int headerLength = headerField.text.Length;
         int contentLength = headerField.text.Length;
 
         layoutElement.enabled = (headerLength > maxCharacter || contentLength > maxCharacter) ? true : false;
     }
+
+    private void Update()
+    {
+        Vector2 mousePosition = Input.mousePosition;
+
+        float pivotX = mousePosition.x/Screen.width;
+        float pivotY = mousePosition.y/Screen.height;
+
+        rectTransform.pivot = new Vector2(pivotX, pivotY);
+
+        transform.position = mousePosition;
+    }
+
 }
