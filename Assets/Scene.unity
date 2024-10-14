@@ -2941,6 +2941,7 @@ MonoBehaviour:
   contentField: {fileID: 1212902898}
   layoutElement: {fileID: 1026491431}
   maxCharacter: 80
+  rectTransform: {fileID: 1026491425}
 --- !u!114 &1026491431
 MonoBehaviour:
   m_ObjectHideFlags: 0
