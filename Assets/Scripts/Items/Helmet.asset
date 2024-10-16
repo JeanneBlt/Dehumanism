@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74de6dabaf17ed4e89407d1953b9aaa, type: 3}
   m_Name: Helmet
   m_EditorClassIdentifier: 
-  name: 
-  description: 
-  visual: {fileID: 0}
-  prefab: {fileID: 0}
+  name: Helmet
+  description: A simple helmet made of iron
+  visual: {fileID: 21300000, guid: 358541a3db89a6f45956a5d4726d7312, type: 3}
+  prefab: {fileID: 1154756441159616395, guid: f2ea33e72d7a3504a8c81df94da0fede, type: 3}
+  itemType: 1
