@@ -74,6 +74,7 @@ public class Inventory : MonoBehaviour
     public void AddItem(ItemData item)
     {
         content.Add(item);
+        RefreshContent();
     }
 
     public void OpenInventory()

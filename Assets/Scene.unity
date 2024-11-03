@@ -613,7 +613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b1a6061047e9248af60723fc264db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  content: []
+  content:
+  - {fileID: 11400000, guid: 0a390f4439172a543ab869bacdf6c77d, type: 2}
+  - {fileID: 11400000, guid: 203297f0e5a133e4481940510de10958, type: 2}
   inventoryPanel: {fileID: 904726152}
   inventorySlotsParent: {fileID: 490575486}
   actionPanel: {fileID: 1385659352}
