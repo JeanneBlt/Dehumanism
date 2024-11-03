@@ -77,7 +77,7 @@ public class Inventory : MonoBehaviour
         RefreshContent();
     }
 
-    public void OpenInventory()
+    private void OpenInventory()
     {
         inventoryPanel.SetActive(true);
         isOpen = true;
