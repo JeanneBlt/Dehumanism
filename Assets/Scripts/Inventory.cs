@@ -43,6 +43,8 @@ public class Inventory : MonoBehaviour
     [SerializeField]
     private EquipmentLibrary equipmentLibrary;
 
+    private bool isOpen = false;
+
     public void Awake()
     {
         instance = this;
@@ -57,20 +59,36 @@ public class Inventory : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
-            inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+            if(isOpen)
+            {
+                CloseInventory();
+            }
+            else
+            {
+                OpenInventory();
+            }
         }
 
-        RefreshContent();
     }
 
     public void AddItem(ItemData item)
     {
         content.Add(item);
+        RefreshContent();
+    }
+
+    public void OpenInventory()
+    {
+        inventoryPanel.SetActive(true);
+        isOpen = true;
     }
 
     public void CloseInventory()
     {
         inventoryPanel.SetActive(false);
+        CloseActionPanel();
+        TooltipSystem.instance.Hide();
+        isOpen = false;
     }
 
     private void RefreshContent()
